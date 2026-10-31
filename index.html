@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Card - Project Pertama</title>
+    <style>
+        /* Pengaturan resolusi dan kanvas dasar untuk video */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Konfigurasi gaya dan animasi teks utama */
+        .fade-in-text {
+            font-size: 6rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            opacity: 0; 
+            /* Animasi berjalan selama 1.5 detik */
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        /* Definisi keyframes untuk efek fade-in yang halus */
+        @keyframes fadeIn {
+            0% { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            }
+            100% { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+      Komponen Struktural HyperFrames:
+      - data-start="0"        : Elemen mulai muncul tepat di awal video (detik ke-0).
+      - data-duration="5"     : Elemen akan ditayangkan selama 5 detik.
+      - data-track-index="1"  : Menetapkan elemen ini berada di layer/trek video pertama.
+    -->
+    <div id="scene-1" data-start="0" data-duration="5" data-track-index="1">
+        <h1 class="fade-in-text">Project Pertama</h1>
+    </div>
+
+</body>
+</html>
